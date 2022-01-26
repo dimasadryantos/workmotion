@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import workmotion.hrplatform.config.StateMachine;
+import workmotion.hrplatform.domain.EmployeeContract;
 import workmotion.hrplatform.domain.persistence.Employee;
 import workmotion.hrplatform.domain.persistence.EmployeeRepository;
 
@@ -128,7 +129,8 @@ class EmployeeEditStateUseCaseTest {
     private Employee constructEmployee(StateMachine stateMachine) {
         Employee employee = new Employee();
         employee.setState(stateMachine);
-        employee.setEmployeeName("Dimas");
+        employee.setEmployeeName("dimas");
+        employee.setContractInformation(EmployeeContract.FULL_TIME.getCode());
         employee.setAge(30);
         employee.setEmployeeId(1L);
         return employee;

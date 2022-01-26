@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import workmotion.hrplatform.client.request.EmployeeEditStateRestRequest;
 import workmotion.hrplatform.config.StateMachine;
+import workmotion.hrplatform.domain.EmployeeContract;
 import workmotion.hrplatform.domain.persistence.Employee;
 import workmotion.hrplatform.domain.persistence.EmployeeRepository;
 
@@ -53,8 +54,9 @@ class EmployeeEditStateControllerIntegrationTest {
     private void constructEmployee() {
         Employee employee = new Employee();
         employee.setState(StateMachine.IN_CHECK);
-        employee.setEmployeeName("Dimas");
+        employee.setEmployeeName("dimas");
         employee.setAge(30);
+        employee.setContractInformation(EmployeeContract.FULL_TIME.getCode());
         employee.setEmployeeId(1L);
         repository.save(employee);
     }

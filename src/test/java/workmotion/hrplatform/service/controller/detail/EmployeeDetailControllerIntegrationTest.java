@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import workmotion.hrplatform.client.response.EmployeeDetailRestResponse;
 import workmotion.hrplatform.config.StateMachine;
+import workmotion.hrplatform.domain.EmployeeContract;
 import workmotion.hrplatform.domain.persistence.Employee;
 import workmotion.hrplatform.domain.persistence.EmployeeRepository;
 
@@ -53,11 +54,11 @@ class EmployeeDetailControllerIntegrationTest {
 
     private void assertEmployeeDetail(List<Employee> employees) {
         employees.forEach(employee -> {
-            assertThat(employee.getEmployeeName()).isEqualTo("dimas");
-            assertThat(employee.getState()).isEqualTo(StateMachine.IN_CHECK);
-            assertThat(employee.getAge()).isEqualTo(30);
-            assertThat(employee.getEmployeeId()).isEqualTo(1L);
-            assertThat(employee.getContractInformation()).isEqualTo("CONTRACT");
+            assertThat(employee.getEmployeeName()).isNotEmpty();
+            assertThat(employee.getState()).isIn(StateMachine.ADDED, StateMachine.IN_CHECK, StateMachine.APPROVED, StateMachine.ACTIVE);
+            assertThat(employee.getAge()).isNotZero();
+            assertThat(employee.getEmployeeId()).isNotZero();
+            assertThat(employee.getContractInformation()).isNotEmpty();
         });
     }
 
@@ -65,6 +66,7 @@ class EmployeeDetailControllerIntegrationTest {
         Employee employee = new Employee();
         employee.setState(StateMachine.IN_CHECK);
         employee.setEmployeeName("dimas");
+        employee.setContractInformation(EmployeeContract.FULL_TIME.getCode());
         employee.setAge(30);
         employee.setEmployeeId(1L);
         employee.setContractInformation("CONTRACT");

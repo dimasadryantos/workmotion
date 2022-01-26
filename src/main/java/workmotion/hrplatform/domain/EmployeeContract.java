@@ -9,9 +9,9 @@ public enum EmployeeContract {
     CONTRACT("CONTRACT", "Contract Employee");
 
 
-    private String name;
+    private final String name;
 
-    private String code;
+    private final String code;
 
 
     EmployeeContract(String code, String name) {

@@ -3,6 +3,3 @@ spring:
     url: jdbc:postgresql://localhost:5432/employee
     username: dimas
     password: password
-  jpa:
-    hibernate:
-      ddl-auto: validate
