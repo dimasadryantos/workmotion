@@ -22,6 +22,8 @@ Install docker go to : https://www.docker.com
 3.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
 
 4.there are two way to test the endpoints first using postman and using integration test that i have provided 
+
+5.Please note if you found the integration test Error it's because the data that need to be provided before hand 
 ```
 
 ## 🏗 Here are some API you need to test :
