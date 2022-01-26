@@ -40,6 +40,8 @@ METHOD BODY :
 
 🧜🏻‍♂️ PUT : localhost:8080/edit (To update the state you need to provide employeeId that have been created with POST above)
 
+ I assume we update the state based on employeeId , and there are many ways to update the state ,would be great if i can have discussion like team
+
 METHOD BODY  : 
 
 {
