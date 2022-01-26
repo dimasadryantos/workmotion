@@ -1,0 +1,34 @@
+version: "2"
+
+networks:
+  workmotion-network:
+    driver: bridge
+
+services:
+  backend:
+    image: "dimasdzz/workmotion-backend:v1"
+    networks:
+      - workmotion-network
+    ports:
+    - "80:8080"
+    restart: "always"
+
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - workmotion-network
+    restart: unless-stopped
+    volumes:
+    - ./schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+    environment:
+      POSTGRES_USER: dimas
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: employee
+    depends_on:
+      - postgress
+
+
+
+
