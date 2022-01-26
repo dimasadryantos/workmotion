@@ -13,12 +13,15 @@ Install docker go to : https://www.docker.com
 
 ```
 
-##  🦾 here are step by step to Start test the application :
+##  🦾 Here are step by step to Start test the application :
 ```
 1.Run 'docker compose up' in directory where docker-compose.yaml file located
+
 2.Run mvn install -DskipTests (without test)
+
 3.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
-4.there are two way to test the end point first using postman and using integration test that i have provided 
+
+4.there are two way to test the endpoints first using postman and using integration test that i have provided 
 ```
 
 ## 🏗 Here are some API you need to test :
