@@ -11,6 +11,8 @@ For mac you can install sdkman
 
 Install docker go to : https://www.docker.com
 
+(Don't forget to setup you IDE java version if you use intellij go to file -> project structure -> project -> java version to java 11)
+
 Environtment version i used :
 java: 11.0.13-librca
 maven: 3.6.3
