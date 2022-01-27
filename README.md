@@ -110,10 +110,10 @@ In this project You will:
 
 - **🕹 Controllers(MVCP):** one per use case, why? because Easy to test and mock and clean dependency injection.
 
-- *🚑 Postgre:** with employee table 
+- *🚑 Postgre:** with employee table has been created 
 
 
-- **🗂 Docker:** with employee table 
+- **🗂 Docker:** to compose postgre
 
 
 
