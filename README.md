@@ -33,7 +33,7 @@ POSTGRES_DB: employee
 
 3.Run mvn install -DskipTests in project directory cd workmotion/ (without test)
 
-4.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
+4.to run springboot app Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar(result build from mvn install above)
 
 5.there are two way to test the endpoints first using postman and using integration test that i have provided 
 
