@@ -29,15 +29,17 @@ POSTGRES_DB: employee
 ```
 1.Run 'docker compose up' in directory where docker-compose.yaml file located
 
-2.Run mvn install -DskipTests (without test)
+2.Set up DB connection with credentials above and run all test
 
-3.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
+3.Run mvn install -DskipTests (without test)
 
-4.there are two way to test the endpoints first using postman and using integration test that i have provided 
+4.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
 
-5.Please note if you found the integration test Error it's because the data that need to be provided before hand 
+5.there are two way to test the endpoints first using postman and using integration test that i have provided 
 
-6.if table not generated try to delete postgre container and run docker compose up again
+6.Please note if you found the integration test Error it's because the data that need to be provided before hand 
+
+7.if table not generated try to delete postgre container and run docker compose up again
 ```
 
 ## 🏗 Here are some API you need to know :
