@@ -36,6 +36,8 @@ POSTGRES_DB: employee
 4.there are two way to test the endpoints first using postman and using integration test that i have provided 
 
 5.Please note if you found the integration test Error it's because the data that need to be provided before hand 
+
+6.if table not generated try to delete postgre container and run docker compose up again
 ```
 
 ## 🏗 Here are some API you need to know :
