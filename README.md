@@ -11,6 +11,10 @@ For mac you can install sdkman
 
 Install docker go to : https://www.docker.com
 
+Environtment version i used :
+java: 11.0.13-librca
+maven: 3.6.3
+
 ```
 
 ##  🦾 Here are step by step to Start test the application :
