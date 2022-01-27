@@ -35,6 +35,8 @@ maven: 3.6.3
 ```
 💰 POST : localhost:8080/employees (end point to save new Employee)
 
+💰 POST Response = success , status = 201 (created)
+
 METHOD BODY : 
 {
     "employeeName" : "andy",
@@ -42,11 +44,29 @@ METHOD BODY :
     "age":25
 }
 
+
+
 🙌🏻 GET : localhost:8080/employees (endpoint to fecth employees detail)
+
+🙌🏻 GET Response = "employees": [
+                                    {
+                                        "employeeId": 27,
+                                        "employeeName": "dimas",
+                                        "contractInformation": "CONTRACT",
+                                        "age": 30,
+                                        "state": "IN_CHECK" , 
+
+                                    }
+                               ]  
+       status = 200 (Ok)
+
+
 
 🧜🏻‍♂️ PUT : localhost:8080/edit (To update the state you need to provide employeeId that have been created with POST above)
 
- I assume we update the state based on employeeId , and there are many ways to update the state ,would be great if i can have discussion like team
+🧜🏻‍♂️ PUT Response = success , status 200(Ok)
+
+I assume we update the state based on employeeId , and there are many ways to update the state ,would be great if i can have discussion like a team
 
 METHOD BODY  : 
 
