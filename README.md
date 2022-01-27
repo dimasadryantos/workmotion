@@ -26,7 +26,7 @@ Install docker go to : https://www.docker.com
 5.Please note if you found the integration test Error it's because the data that need to be provided before hand 
 ```
 
-## 🏗 Here are some API you need to test :
+## 🏗 Here are some API you need to know :
 
 ```
 💰 POST : localhost:8080/employees (end point to save new Employee)
