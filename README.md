@@ -17,6 +17,12 @@ Environtment version i used :
 java: 11.0.13-librca
 maven: 3.6.3
 
+
+DB Credential Set up : 
+POSTGRES_USER: dimas
+POSTGRES_PASSWORD: password
+POSTGRES_DB: employee
+
 ```
 
 ##  🦾 Here are step by step to Start test the application :
