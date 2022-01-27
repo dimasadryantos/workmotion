@@ -11,6 +11,18 @@ For mac you can install sdkman
 
 Install docker go to : https://www.docker.com
 
+(Don't forget to setup you IDE java version if you use intellij go to file -> project structure -> project -> java version to java 11)
+
+Environtment version i used :
+java: 11.0.13-librca
+maven: 3.6.3
+
+
+DB Credential Set up : 
+POSTGRES_USER: dimas
+POSTGRES_PASSWORD: password
+POSTGRES_DB: employee
+
 ```
 
 ##  🦾 Here are step by step to Start test the application :
@@ -26,10 +38,12 @@ Install docker go to : https://www.docker.com
 5.Please note if you found the integration test Error it's because the data that need to be provided before hand 
 ```
 
-## 🏗 Here are some API you need to test :
+## 🏗 Here are some API you need to know :
 
 ```
 💰 POST : localhost:8080/employees (end point to save new Employee)
+
+💰 POST Response = success , status = 201 (created)
 
 METHOD BODY : 
 {
@@ -38,11 +52,29 @@ METHOD BODY :
     "age":25
 }
 
+
+
 🙌🏻 GET : localhost:8080/employees (endpoint to fecth employees detail)
+
+🙌🏻 GET Response = "employees": [
+                                    {
+                                        "employeeId": 27,
+                                        "employeeName": "dimas",
+                                        "contractInformation": "CONTRACT",
+                                        "age": 30,
+                                        "state": "IN_CHECK" , 
+
+                                    }
+                               ]  
+       status = 200 (Ok)
+
+
 
 🧜🏻‍♂️ PUT : localhost:8080/edit (To update the state you need to provide employeeId that have been created with POST above)
 
- I assume we update the state based on employeeId , and there are many ways to update the state ,would be great if i can have discussion like team
+🧜🏻‍♂️ PUT Response = success , status 200(Ok)
+
+I assume we update the state based on employeeId , and there are many ways to update the state ,would be great if i can have discussion like a team
 
 METHOD BODY  : 
 
@@ -86,10 +118,10 @@ In this project You will:
 
 - **🕹 Controllers(MVCP):** one per use case, why? because Easy to test and mock and clean dependency injection.
 
-- *🚑 Postgre:** with employee table 
+- *🚑 Postgre:** with employee table has been created 
 
 
-- **🗂 Docker:** with employee table 
+- **🗂 Docker:** to compose postgre
 
 
 
