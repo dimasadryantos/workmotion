@@ -31,7 +31,7 @@ POSTGRES_DB: employee
 
 2.Set up DB connection with credentials above and run all test
 
-3.Run mvn install -DskipTests (without test)
+3.Run mvn install -DskipTests in project directory cd workmotion/ (without test)
 
 4.Go to project and cd to target folder then execute application jar : java -jar hrapplication-0.0.1-SNAPSHOT.jar
 
